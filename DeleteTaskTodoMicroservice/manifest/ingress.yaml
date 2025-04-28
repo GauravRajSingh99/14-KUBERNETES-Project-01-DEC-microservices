@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: deletetask
+  labels:
+    name: deletetask
+spec:
+  rules:
+  - host: todo-delete-task.gauravrajsingh369.online
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: deletetask
+            port: 
+              number: 80
